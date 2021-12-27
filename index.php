@@ -272,12 +272,12 @@ aside{
 
 <script>
   function primoo(){
-   const nnPrimo = document.getElementById("nnPrimo");
+    var nnPrimo = document.getElementById("nnPrimo");
    var numerop = parseInt(document.getElementById("numero").value);
     
     let pp=0;
 
-    if(isNaN(nnPrimo)){
+    if(isNaN(numerop)){
     alert("No puedes dejar el campo vacio!");
    }else{
 
