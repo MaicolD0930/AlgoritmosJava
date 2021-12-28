@@ -1,4 +1,15 @@
-  //Ejercicio1
+function M1(){
+    var x = document.getElementById("Ejj1");
+    if(x.style.display === "none"){
+        x.style.display === "block";
+    }else {
+        x.style.display === "none"
+
+}
+}
+
+
+//Ejercicio1
   function area(){
    var areaResultado = document.getElementById("areaResultado");
    var b = parseInt(document.getElementById("base").value);
@@ -166,3 +177,167 @@
         pagoo= (Horasp*6666.666666666667);
         Hextraa.innerHTML = "su pago es: "+pagoo;
     }}}
+
+    //Funcionamiento del diseño
+    $(document).ready(() => {
+
+        //Ocultar triangulos
+        $('#T1').hide();
+        $('#T2').hide();
+        $('#T3').hide();
+
+
+        //Mostrar Ejercicio1
+        $('#Ejj1').hide();
+        $('#Ej1').click(function() {
+            $('#Ejj1').show();
+            $('#Ejj2').hide();
+            $('#Ejj3').hide();
+            $('#Ejj4').hide();
+            $('#Ejj5').hide();
+        });
+
+        //Mostrar Ejercicio2
+        $('#Ejj2').hide();
+        $('#Ej2').click(function() {
+            $('#Ejj2').show();
+
+            $('#Ejj1').hide();
+            $('#Ejj3').hide();
+            $('#Ejj4').hide();
+            $('#Ejj5').hide();
+        });
+        //Mostrar Ejercicio3
+        $('#Ejj3').hide();
+        $('#Ej3').click(function() {
+            $('#Ejj3').show();
+
+            $('#Ejj2').hide();
+            $('#Ejj1').hide();
+            $('#Ejj4').hide();
+            $('#Ejj5').hide();
+        });
+        //Mostrar Ejercicio4
+        $('#Ejj4').hide();
+        $('#Ej4').click(function() {
+            $('#Ejj4').show();
+
+            $('#Ejj2').hide();
+            $('#Ejj3').hide();
+            $('#Ejj1').hide();
+            $('#Ejj5').hide();
+        });
+        //Mostrar Ejercicio5
+        $('#Ejj5').hide();
+        $('#Ej5').click(function() {
+            $('#Ejj5').show();
+
+            $('#Ejj2').hide();
+            $('#Ejj3').hide();
+            $('#Ejj4').hide();
+            $('#Ejj1').hide();
+        });
+        //Mostrar Todos
+        $('#Ej6').click(function() {
+            $('#Ejj1').show();
+            $('#Ejj2').show();
+            $('#Ejj3').show();
+            $('#Ejj4').show();
+            $('#Ejj5').show();
+        });
+
+
+
+        $('#Inv1').hide();
+        $('#Inv2').hide();
+        $('#Inv3').hide();
+        $('#Inv4').hide();
+        $('#Inv5').hide();
+        $('#OcultarInv1').hide();
+        $('#OcultarInv2').hide();
+        $('#OcultarInv3').hide();
+        $('#OcultarInv4').hide();
+        $('#OcultarInv5').hide();
+
+        $('#MostrarInv1').click(function() {
+            $('#MostrarInv1').hide();
+            $('#OcultarInv1').show();
+        });
+        $('#OcultarInv1').click(function() {
+            $('#MostrarInv1').show();
+            $('#OcultarInv1').hide();
+        });
+
+        $('#MostrarInv2').click(function() {
+            $('#MostrarInv2').hide();
+            $('#OcultarInv2').show();
+        });
+        $('#OcultarInv2').click(function() {
+            $('#MostrarInv2').show();
+            $('#OcultarInv2').hide();
+        });
+
+        $('#MostrarInv3').click(function() {
+            $('#MostrarInv3').hide();
+            $('#OcultarInv3').show();
+        });
+        $('#OcultarInv3').click(function() {
+            $('#MostrarInv3').show();
+            $('#OcultarInv3').hide();
+        });
+        $('#MostrarInv4').click(function() {
+            $('#MostrarInv4').hide();
+            $('#OcultarInv4').show();
+        });
+        $('#OcultarInv4').click(function() {
+            $('#MostrarInv4').show();
+            $('#OcultarInv4').hide();
+        });
+        $('#MostrarInv5').click(function() {
+            $('#MostrarInv5').hide();
+            $('#OcultarInv5').show();
+        });
+        $('#OcultarInv5').click(function() {
+            $('#MostrarInv5').show();
+            $('#OcultarInv5').hide();
+        });
+
+
+
+
+
+        $('#OcultarInv1').click(function() {
+            $('#Inv1').hide();
+        });
+        $('#OcultarInv2').click(function() {
+            $('#Inv2').hide();
+        });
+        $('#OcultarInv3').click(function() {
+            $('#Inv3').hide();
+        });
+        $('#OcultarInv4').click(function() {
+            $('#Inv4').hide();
+        });
+        $('#OcultarInv5').click(function() {
+            $('#Inv5').hide();
+        });
+
+
+        $('#MostrarInv1').click(function() {
+            $('#Inv1').show();
+        });
+        $('#MostrarInv2').click(function() {
+            $('#Inv2').show();
+        });
+        $('#MostrarInv3').click(function() {
+            $('#Inv3').show();
+        });
+        $('#MostrarInv4').click(function() {
+            $('#Inv4').show();
+        });
+        $('#MostrarInv5').click(function() {
+            $('#Inv5').show();
+        });
+
+
+    });
