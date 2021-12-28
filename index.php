@@ -9,15 +9,40 @@
 </head>
 <body >
 <style>
-
-
-    body {
+ body {
     height: 800px;
     background-image: url("https://p4.wallpaperbetter.com/wallpaper/238/702/429/abstract-texture-hd-4k-wallpaper-preview.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
   }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+
 
 header{
     background:rgb(10, 10, 10);
@@ -56,18 +81,14 @@ aside{
   border-radius: 3px;
 
 }
-
-    .BtnNormal:active {
+.BtnNormal:active {
   background-color: blue;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-
 .oculto{
     display:none;
 }
-
 .OcBtn{
     background-color: rgb(128, 128, 143);
     border-radius: 4px;
@@ -79,7 +100,6 @@ aside{
     background-color: black;
     color: white;
 }
-
 .OcBtn1{
     background-color: rgb(128, 128, 160);
     border-radius: 4px;
@@ -91,7 +111,6 @@ aside{
     background-color: black;
     color: white;
 }
-
 .OmBtn{
     background-color: rgb(128, 128, 143);
     border-radius: 4px;
@@ -103,7 +122,6 @@ aside{
     background-color: black;
     color: red;
 }
-
 .OmBtn1{
     background-color: rgb(128, 128, 160);
     border-radius: 4px;
@@ -119,18 +137,20 @@ aside{
 
 
 </style>
-    
-<header>
-<div class="container">
-        <h1>Examen de algoritmos</h1>
-</div>
-</header>
+<ul>
+  <li><a id="Ej1" href="#">Ejercicio N.1</a></li>
+  <li><a id="Ej2" href="#">Ejercicio N.2</a></li>
+  <li><a id="Ej3" href="#">Ejercicio N.3</a></li>
+  <li><a id="Ej4" href="#">Ejercicio N.4</a></li>
+  <li><a id="Ej5" href="#">Ejercicio N.5</a></li>
+  <li><a id="Ej6" href="#">Enseñar todos</a></li>
+</ul>
 
 <!-- Ejercicio N.1 -->
-<div class="container">
+<div class="container" id="Ejj1">
 <section class="main row">
     <article class="col-md-8">
-    <h3>Determinar el área de un triángulo</h3>
+    <h3>1.Determinar el área de un triángulo</h3>
     <label>Ingrese la base y altura del triangulo.</label>
     <button class="OcBtn" id="MostrarInv1">?</button>
     <button class="OmBtn" id="OcultarInv1">X</button>
@@ -172,10 +192,10 @@ aside{
 
 
 <!-- Ejercicio N.2 -->
-<div class="container">
+<div class="container" id="Ejj2">
 <section class="main2 row">
     <article class="col-md-8">
-    <h3>Determinar el numero mayor entre 3 imputs</h3>
+    <h3>2.Determinar el numero mayor entre 3 imputs</h3>
     <label>Ingrese 3 numeros enteros para determinar el mayor de estos.</label>
     <button class="OcBtn1" id="MostrarInv2">?</button>
     <button class="OmBtn1" id="OcultarInv2">X</button>
@@ -273,10 +293,10 @@ aside{
 
 
 <!-- Ejercicio N.3 -->
-<div class="container">
+<div class="container" id="Ejj3">
 <section class="main row">
     <article class="col-md-8">
-    <h3>Definir que tipo de triangulo es por medio de sus medidas</h3>
+    <h3>3.Definir que tipo de triangulo es por medio de sus medidas</h3>
     <label>Ingrese los tres lados del triangulo.</label>
     <button class="OcBtn" id="MostrarInv3">?</button>
     <button class="OmBtn" id="OcultarInv3">X</button>
@@ -329,10 +349,10 @@ aside{
 
 
 <!-- Ejercicio N.4 -->
-<div class="container">
+<div class="container" id="Ejj4">
 <section class="main2 row">
     <article class="col-md-8">
-    <h3>Definir si es numero primo</h3>
+    <h3>4.Definir si es numero primo</h3>
     <label>Ingrese un número.</label>
     <button class="OcBtn1" id="MostrarInv4">?</button>
     <button class="OmBtn1" id="OcultarInv4">X</button>
@@ -382,11 +402,11 @@ aside{
 
 
 <!-- Ejercicio N.5 -->
-<div class="container">
+<div class="container" id="Ejj5">
 <section class="main row">
     <article class="col-md-8">
 
-    <h3>Determinar salario de un trabajador</h3>
+    <h3>5.Determinar salario de un trabajador</h3>
     <label>Ingrese la cantidad de horas que trabajo en el mes.</label>
     <button class="OcBtn" id="MostrarInv5">?</button>
     <button class="OmBtn" id="OcultarInv5">X</button>
@@ -438,6 +458,67 @@ aside{
 
 <script>
 $(document).ready(() => {
+
+        //Mostrar Ejercicio1
+        $('#Ejj1').hide();
+        $('#Ej1').click(function() {
+            $('#Ejj1').show();   
+            $('#Ejj2').hide();
+            $('#Ejj3').hide();
+            $('#Ejj4').hide();
+            $('#Ejj5').hide(); 
+        });
+        //Mostrar Ejercicio2
+        $('#Ejj2').hide();
+        $('#Ej2').click(function() {
+            $('#Ejj2').show();
+
+            $('#Ejj1').hide();
+            $('#Ejj3').hide();
+            $('#Ejj4').hide();
+            $('#Ejj5').hide();     
+        });
+        //Mostrar Ejercicio3
+        $('#Ejj3').hide();
+        $('#Ej3').click(function() {
+            $('#Ejj3').show();
+
+            $('#Ejj2').hide();
+            $('#Ejj1').hide();
+            $('#Ejj4').hide();
+            $('#Ejj5').hide();     
+        });
+        //Mostrar Ejercicio4
+        $('#Ejj4').hide();
+        $('#Ej4').click(function() {
+            $('#Ejj4').show();  
+
+            $('#Ejj2').hide();
+            $('#Ejj3').hide();
+            $('#Ejj1').hide();
+            $('#Ejj5').hide();     
+        });
+        //Mostrar Ejercicio5
+        $('#Ejj5').hide();
+        $('#Ej5').click(function() {
+            $('#Ejj5').show();      
+
+            $('#Ejj2').hide();
+            $('#Ejj3').hide();
+            $('#Ejj4').hide();
+            $('#Ejj1').hide(); 
+        });
+        //Mostrar Todos
+        $('#Ej6').click(function() {
+            $('#Ejj1').show();      
+            $('#Ejj2').show();
+            $('#Ejj3').show();
+            $('#Ejj4').show();
+            $('#Ejj5').show(); 
+        });
+
+
+
         $('#Inv1').hide();
         $('#Inv2').hide();
         $('#Inv3').hide();
